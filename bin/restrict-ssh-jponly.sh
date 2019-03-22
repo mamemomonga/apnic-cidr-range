@@ -15,7 +15,7 @@ $IPTABLES -A FORWARD -i lo -j ACCEPT
 
 $IPTABLES -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 
-$IPTABLES -D COUNTRY > /dev/null 2>&1
+$IPTABLES -X COUNTRY > /dev/null 2>&1
 $IPTABLES -N COUNTRY
 $BASEDIR/bin/apply-iptables.pl JP eth0 COUNTRY
 $IPTABLES -A COUNTRY -p tcp --dport 22 --syn -j ACCEPT
