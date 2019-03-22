@@ -4,7 +4,7 @@ use warnings;
 use Cwd;
 use File::Basename;
 
-use constant DEBUG=>1;
+use constant DEBUG=>0;
 
 my $datadir=Cwd::abs_path(dirname($0)."/../var/country");
 my @args=();
